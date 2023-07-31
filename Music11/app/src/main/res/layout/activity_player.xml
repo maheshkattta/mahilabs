@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fullscreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:theme="@style/ThemeOverlay.Music11.FullscreenContainer"
+    tools:context=".PlayerActivity" >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="280dp"
+        android:layout_height="210dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/activesongalbum"
+        app:srcCompat="@android:drawable/stat_sys_headset" />
+
+    <TextView
+        android:id="@+id/activesongalbum"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:ellipsize="marquee"
+        android:focusable="false"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:scrollbars = "vertical"
+     />
+
+    <TextView
+        android:id="@+id/activesongtitle"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:ellipsize="marquee"
+        android:focusable="false"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:scrollbars = "vertical"
+       />
+
+    <TextView
+        android:id="@+id/start_time"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:textSize="10sp"
+        android:layout_below="@+id/progressbar"
+        android:layout_toEndOf="@+id/pause_pic"
+        android:layout_marginStart="90dp"
+        android:text="@string/_05_00"
+        />
+
+    <TextView
+        android:id="@+id/end_time"
+        android:text="@string/_00_00"
+        android:layout_width="40dp"
+        android:textSize="10sp"
+        android:singleLine="true"
+        android:layout_height="30dp"
+        android:layout_below="@+id/progressbar"
+        android:layout_toStartOf="@+id/pause_pic"
+        android:layout_marginEnd="90dp"
+        android:layout_marginBottom="241dp"
+        />
+
+
+    <ImageView
+        android:id="@+id/next_song"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/progressbar"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="50dp"
+        android:layout_toEndOf="@+id/pause_pic"
+        app:srcCompat="@android:drawable/ic_media_next" />
+
+    <ImageView
+        android:id="@+id/pause_pic"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/progressbar"
+        android:visibility="visible"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@android:drawable/ic_media_pause" />
+    <ImageView
+        android:id="@+id/play_pic"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/progressbar"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
+    <ImageView
+        android:id="@+id/prev_song"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/progressbar"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="50dp"
+        android:layout_toStartOf="@+id/pause_pic"
+        app:srcCompat="@android:drawable/ic_media_previous" />
+
+    <SeekBar
+        android:id="@+id/progressbar"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/activesongtitle"
+        android:layout_centerHorizontal="true"
+       />
+</RelativeLayout>

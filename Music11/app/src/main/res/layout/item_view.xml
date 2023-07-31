@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/cardview"
+    android:layout_marginTop="10dp">
+
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_marginStart="20dp"
+        android:layout_width="42dp"
+        android:layout_height="42dp" />
+
+    <TextView
+        android:id="@+id/song_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/imageview"
+        android:textColor="@color/black"
+        android:layout_marginStart="15dp"
+        android:textSize="16dp"
+        tools:text="NAME" />
+
+
+    <TextView
+        android:id="@+id/album_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/song_name"
+        android:layout_toEndOf="@id/imageview"
+        android:textSize="10dp"
+
+        android:layout_marginStart="18dp"
+        android:textColor="@color/black"
+        tools:text="ALBUM" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/imageview"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#00DAD8DB" />
+
+
+</RelativeLayout>
